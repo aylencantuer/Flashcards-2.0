@@ -1,6 +1,17 @@
 # flashcards
-#node #websocket #study #webAPP
+#nodejs #websocket #study #webAPP
+----------------------------------------------------------
 
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------
 To do list:
 -mas logs
     mensaje cuando se crea una flashcard

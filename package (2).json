@@ -1,0 +1,16 @@
+{
+  "name": "flashcard-app",
+  "version": "1.0.0",
+  "description": "Para estudiar juntitos!!!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aylen",
+  "license": "ISC",
+  "dependencies": {
+    "expres": "^0.0.5",
+    "express": "^4.18.2",
+    "ws": "^8.14.2"
+  }
+}

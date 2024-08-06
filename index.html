@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" /> 
+  </head>
+
+  <body>
+    
+    <!-- Botón para añadir flashcards. -->
+    <div class="container"> 
+      <div class="add-flashcard-con"> 
+        <button type="button" id="add-flashcard">Add Flashcard</button> 
+      </div>
+
+      <!-- Aquí se mostrarán las tarjetas de preguntas y respuestas -->
+      <div id="card-con">
+        <div class="card-list-container"></div> 
+      </div>
+    </div>
+
+    <!-- Formulario de entrada -->
+    <div class="question-container hide" id="add-question-card"> 
+      <h2>Add Flashcard</h2> 
+      <div class="wrapper">
+        <div class="error-con">
+          <span class="hide" id="error">Input fields cannot be empty!</span> 
+        </div>
+        <i class="fa-solid fa-xmark" id="close-btn"></i> 
+
+      </div>
+      <!-- div de creacion-->
+      <label for="question">Question:</label> 
+      <textarea class="input" id="question" placeholder="Type the question here..." rows="2"></textarea> 
+      <label for="answer">Answer:</label> 
+      <textarea class="input" id="answer" rows="4" placeholder="Type the answer here..."></textarea> 
+      <button id="save-btn">Save</button> 
+    </div>
+
+    <script src="js/random-colors.js"></script> 
+    <script src="./app.js"></script> 
+  </body>
+
+</html>

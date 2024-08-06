@@ -1,0 +1,256 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; 
+}
+
+body {
+  background: linear-gradient(to right, #ff7e5f, #feb47b); 
+  color: #ffffff; 
+}
+
+.container {
+  width: 90vw;
+  max-width: 62.5em;
+  margin: auto;
+  padding-top: 2em;
+}
+
+.add-flashcard-con {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.2em 1em;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-flashcard-con button {
+  font-size: 1.2em;
+  background-color: #1f4037; 
+  color: #a8ff78; 
+  padding: 0.8em 1.2em;
+  font-weight: 500;
+  border-radius: 1em; 
+  transition: transform 0.2s; 
+}
+
+.add-flashcard-con button:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+#card-con {
+  margin-top: 1em;
+}
+
+.card-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em; /* Espacio entre tarjetas */
+}
+
+.card {
+  box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.2); 
+  padding: 1.5em;
+  border-radius: 1em; 
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-0.5em); 
+}
+
+.question-div,
+.answer-div {
+  text-align: justify;
+  font-weight: 500;
+}
+
+.question-div {
+  margin-bottom: 0.5em;
+  color: #ffffff; 
+}
+
+.answer-div {
+  margin-top: 1em;
+  color: #f5f5f5; 
+}
+
+.show-hide-btn {
+  display: block;
+  background-color: #2b5876; 
+  color: #f5f5f5; 
+  text-decoration: none;
+  text-align: center;
+  padding: 0.8em 0;
+  border-radius: 1em;
+  margin-top: 1em;
+  transition: background-color 0.3s;
+}
+
+.show-hide-btn:hover {
+  background-color: #4e4376; 
+}
+
+.buttons-con {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  position: relative; /* Asegura que los botones estén posicionados correctamente dentro del contenedor */
+}
+
+.edit,
+.delete {
+  background-color: #333; 
+  padding: 0.6em;
+  font-size: 1.2em;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #ffffff; 
+  text-decoration: none; 
+}
+
+.edit {
+  background-color: #ff00d0; 
+}
+
+.delete {
+  background-color: #fb0606; 
+}
+
+
+.edit:hover,
+.delete:hover {
+  background-color: #ffffff; 
+  color: #333; 
+  transform: scale(1.1); 
+}
+
+/* Estilos para los íconos */
+.edit i,
+.delete i {
+  font-size: 1.0em; 
+  margin: 0; 
+}
+
+
+
+.hide {
+  display: none;
+}
+
+/* Contenedor para Crear Nueva Flashcard */
+.question-container {
+  width: 90vw;
+  max-width: 34em;
+  background-color: #ffffff; 
+  color: #2b5876; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3em 2em;
+  border-radius: 1em;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2); 
+}
+
+.question-container h2 {
+  font-size: 2.2em;
+  color: #2b5876; 
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.error-con {
+  align-self: center;
+  grid-column: span 2;
+}
+
+#error {
+  color: #ff6b6b; 
+  font-weight: 400;
+}
+
+/* Botón de Cerrar */
+.fa-xmark {
+  font-size: 1.4em;
+  background-color: #ff6b6b; 
+  height: 1.8em;
+  width: 1.8em;
+  display: grid;
+  place-items: center;
+  color: #ffffff; 
+  border-radius: 50%;
+  cursor: pointer;
+  justify-self: flex-end;
+}
+
+label {
+  color: #2b5876; 
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 2px solid #d0d0d0;
+  outline: none;
+  color: #414a67; 
+  border-radius: 0.3em;
+  resize: none;
+}
+
+textarea:focus {
+  border-color: #2b5876; 
+}
+
+#save-btn {
+  font-size: 1.2em;
+  background-color: #ff7e5f; 
+  color: #ffffff; 
+  padding: 0.8em 0;
+  border-radius: 0.5em;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+#save-btn:hover {
+  background-color: #feb47b; 
+}
+
+/* Media Queries para Responsividad */
+@media screen and (max-width: 800px) {
+  .card-list-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 14px;
+  }
+  .card-list-container {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+  }
+}
